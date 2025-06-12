@@ -1,12 +1,8 @@
 export function sumNumbers(arr) {
-  let total = 0;
-  for (const n of arr) {
-    total += n;
-  }
-  return total;
+  return arr.reduce((sum, num) => sum + num, 0);
 }
 
 export function average(arr) {
   if (arr.length === 0) return 0;
-  return sumNumbers(arr) / arr.length;
+  return arr.reduce((sum, num) => sum + num, 0) / arr.length;
 }
