@@ -1,4 +1,4 @@
-const { average } = require('../src/utils/math.js');
+import { average } from '../src/utils/math.js';
 
 describe('average function', () => {
   test('空の配列の場合は0を返す', () => {

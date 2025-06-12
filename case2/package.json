@@ -7,11 +7,12 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
   },
-
+  "type": "module",
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "transform": {}
   },
   "keywords": [],
   "author": "",
