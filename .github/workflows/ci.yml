@@ -1,3 +1,4 @@
+# GitHub Actions CI workflow for case2 TDD workshop
 name: CI
 
 on:
