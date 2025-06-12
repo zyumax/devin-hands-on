@@ -4,7 +4,7 @@
   "description": "Devin を使い、テスト駆動で開発・修正を行いましょう。",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "test": "src/tests"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest"
