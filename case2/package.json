@@ -9,11 +9,9 @@
   "scripts": {
     "test": "jest"
   },
-  "type": "module",
+
   "jest": {
-    "preset": "default",
-    "testEnvironment": "node",
-    "transform": {}
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
