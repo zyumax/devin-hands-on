@@ -38,6 +38,26 @@ program
     if (options.text) console.log(`テキスト: ${options.text}`);
   });
 
+program
+  .command('omikuji')
+  .description('おみくじを引いて運勢を占う')
+  .action(() => {
+    const fortunes = [
+      { name: '大吉', emoji: '🌟', color: 'green', message: '素晴らしい一日になりそうです！' },
+      { name: '中吉', emoji: '✨', color: 'yellow', message: '良いことがありそうです。' },
+      { name: '小吉', emoji: '🍀', color: 'cyan', message: 'ちょっとした幸運が訪れるかも。' }
+    ];
+    
+    const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+    
+    console.log(chalk.bold('\n🎋 おみくじ結果 🎋'));
+    console.log('━'.repeat(30));
+    console.log(chalk[randomFortune.color].bold(`${randomFortune.emoji} ${randomFortune.name} ${randomFortune.emoji}`));
+    console.log(chalk.gray(randomFortune.message));
+    console.log('━'.repeat(30));
+    console.log(chalk.dim('今日も良い一日を！\n'));
+  });
+
 if (process.argv.length === 2) {
   program.help();
 }
